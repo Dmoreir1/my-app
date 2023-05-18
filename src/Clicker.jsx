@@ -1,14 +1,14 @@
 import React from 'react'
 
-export const Clicker = ({onClick}) => {
+export const Clicker = ({onClicked}) => {
 
-
+  const handleClick = (message) => {
+    console.log(message)
+  }
   return (
     <div>
-        <button onClick={() => {handleClick("He said Yes!")}}>Yes!</button>
-        <button onClick={() => {handleClick("He said No!!")}}>No!</button>
+        <button onClick={() => onClicked('He said Yes!!!')}>Yes!</button>
+        <button onClick={() => onClicked("He said No!!")}>No!</button>
     </div>
   )
-
-  
 }
